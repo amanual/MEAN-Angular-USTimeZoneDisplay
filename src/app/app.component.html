@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+  <div>
+    <h2>US Time Zone Display</h2>
+    <button  (click)='time_zone("America/New_York")'  [ngClass]="{'on':selectedBt==='America/New_York'}">EST</button>
+    <button  (click)='time_zone("America/Los_Angeles")' [ngClass]="{'on':selectedBt==='America/Los_Angeles'}">PST</button>
+    <button  (click)='time_zone("America/Denver")' [ngClass]="{'on':selectedBt==='America/Denver'}">MST</button>
+    <button  (click)='time_zone("America/Chicago")' [ngClass]="{'on':selectedBt==='America/Chicago'}">CST</button>    
+    <button  (click) = 'clearTime("clear")' [ngClass]="{'on':selectedBt==='clear'}">Clear</button>
+    
+    <h2>{{ timeData | date:'medium' }}</h2>
+    
+  </div>
+</body>
+</html>
